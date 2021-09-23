@@ -1,1 +1,2 @@
 # quiz_game
+## I have been banging my head against the wall on this project. I figured out how to do the timer feature. And I made an array that holds all the questions. When I look up ways on how I should look for ways to go through the questions and check the answers and factor that into the score I get lost. I have found different things on the "for each" loop but it confuses me because it is different than a regular for loop. Can the same thing be done with a for loop?
