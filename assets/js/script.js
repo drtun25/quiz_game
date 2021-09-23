@@ -32,8 +32,10 @@ var startButton = document.querySelector('.start-button');
 
 var quizGameQuestions = [];
 
+
 var quizGame = [ {
     question: "This is a value that deals with true or false.",
+    
     option1: "A." + "boolean",
     option2: "B." + "string",
     option3: "C." + "function",
@@ -44,6 +46,7 @@ var quizGame = [ {
 
 {
     question: "This value has something to do with quotations.",
+   
     option1: "A." + "boolean",
     option2: "B." + "string",
     option3: "C." + "function",
@@ -55,6 +58,7 @@ var quizGame = [ {
 
 {
     question: "This value has a lot to do with numbers.",
+    
     option1: "A." + "boolean",
     option2: "B." + "string",
     option3: "C." + "numbers",
@@ -66,6 +70,7 @@ var quizGame = [ {
 
 {
     question: "This value can be used to make lists.",
+    
     option1: "A." + "boolean",
     option2: "B." + "string",
     option3: "C." + "numbers",
@@ -76,6 +81,9 @@ var quizGame = [ {
 }
 ];
 
+var questionNumber = 1
+var score = 100
+var indexNumber = 0
 
 
 //when the button clicks the game starts
@@ -85,7 +93,6 @@ resetButton.addEventListener('click', startGame())
 //the function that starts the game
 function startGame() {
 
-    
     
     startTimer()
     
@@ -109,8 +116,21 @@ function startTimer() {
 //the function that handles the questions and answers
 function randomQuestions() {
 
+    if (quizGameQuestions.length <= 3) {
+        
+        if (quizGameQuestions.length <= 3) {
+            var random = quizGame[Math.floor(Math.random() * quizGame.length)]
+            if (!quizGameQuestions.includes(random)) {
+                quizGameQuestions.push(random)
+            }
+        }
+    }
 
+}
 
+function newQuestion(index) {
+    randomQuestions()
+    var currentQuestion = quizGameQuestions[index]
 }
 
 
